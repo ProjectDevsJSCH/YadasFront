@@ -1,0 +1,21 @@
+.tr-fade-in-move-enter-active,
+.tr-fade-in-move-leave-active {
+  transition: all 0.5s;
+}
+
+.tr-fade-in-move-enter,
+.tr-fade-in-move-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.tr-fade-in-move-x-enter-active,
+.tr-fade-in-move-x-leave-active {
+  @extend .tr-fade-in-move-enter-active;
+}
+
+.tr-fade-in-move-x-enter,
+.tr-fade-in-move-x-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
