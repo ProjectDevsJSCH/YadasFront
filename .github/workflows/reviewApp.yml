@@ -14,7 +14,7 @@ jobs:
         
     steps:
     - name: Log env values
-      run: echo ${{ secrets }}
+      run: echo ${{ env.VUE_APP_BASE_URL }}
 
     - name: Checkout source code
       uses: actions/checkout@v1
