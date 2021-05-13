@@ -35,7 +35,7 @@ jobs:
     - name: Building application
       run: npm run build
       env: 
-        VUE_APP_BASE_URL: ${{ review.VUE_APP_BASE_URL }}
+        VUE_APP_BASE_URL: ${{ secrets.review.VUE_APP_BASE_URL }}
       
     - name: Generate deployment package
       run: zip -r deploy.zip . -x ".git/*" -x ".github/*" -x ".vscode/*"
