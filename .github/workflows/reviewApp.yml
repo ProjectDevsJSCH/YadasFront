@@ -15,8 +15,6 @@ jobs:
         node-version: [14.x]
         
     steps:
-    - name: Log env values
-      run: echo ${{ secrets.AWS_ACCESS_KEY_ID }}
 
     - name: Checkout source code
       uses: actions/checkout@v1
