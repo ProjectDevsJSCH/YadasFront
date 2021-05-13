@@ -6,7 +6,7 @@ const history = require("connect-history-api-fallback");
 
 const app = express();
 const innerPath = path.join(__dirname, "../", "dist");
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 
 app.use(express.json());
 app.use(
