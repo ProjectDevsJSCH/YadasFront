@@ -70,6 +70,9 @@ jobs:
     - name: Deployed successfully!
       run: echo App deployed to ELB
 
+
+
+
   build-review:
     runs-on: ubuntu-latest
     environment: 
@@ -97,7 +100,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Installing NPM
-      run: npm install --production=false
+      run: npm install
 
     - name: Building application
       run: npm run build
@@ -127,7 +130,7 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: us-east-2
         application_name: Front-app
-        environment_name: Front-app-prod
+        environment_name: Front-app-reviewapps
         version_label: "my-app-${{ steps.format-time.outputs.replaced }}" # Using timestamp created previously
         deployment_package: deploy.zip
     
