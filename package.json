@@ -26,6 +26,7 @@
     "chart.js": "^2.9.4",
     "chartjs-plugin-zoom": "^0.7.7",
     "clipboard": "^2.0.6",
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.5",
     "cors": "^2.8.5",
     "dayjs": "^1.8.36",

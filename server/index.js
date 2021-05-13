@@ -1,27 +1,20 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+
 const express = require("express");
-const cors = require("cors");
 const path = require("path");
+const history = require("connect-history-api-fallback");
 
-const innerPath = path.join(__dirname, "../", "dist");
 const app = express();
+const innerPath = path.join(__dirname, "../", "dist");
+const port = process.env.PORT || 8080;
 
+app.use(express.json());
+app.use(
+  history({
+    verbose: true
+  })
+);
 app.use(express.static(innerPath));
 
-const corsOptions = {
-  origin: "*"
-};
-
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-  res.sendFile(`${innerPath}index.html`);
-});
-
-const PORT = process.env.PORT || 80;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
+app.listen(port);
+console.log(`server started ${port}`);
