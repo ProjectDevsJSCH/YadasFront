@@ -1,18 +1,18 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
-const express = require("express");
-const path = require("path");
-const history = require("connect-history-api-fallback");
+const express = require('express');
+const path = require('path');
+const history = require('connect-history-api-fallback');
 
 const app = express();
-const innerPath = path.join(__dirname, "../", "dist");
+const innerPath = path.join(__dirname, '../', 'dist');
 const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(
   history({
-    verbose: true
-  })
+    verbose: true,
+  }),
 );
 app.use(express.static(innerPath));
 
