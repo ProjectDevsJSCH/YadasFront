@@ -16,6 +16,6 @@ jobs:
         
     steps:
     - name: 'Deploy ${{ github.event.deployment.environment }}'
-      run: echo ${{ github.event.deployment.environment }}
+      run: echo ${{ github.event.deployment }}
 
 
