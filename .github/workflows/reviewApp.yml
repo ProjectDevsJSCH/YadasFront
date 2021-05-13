@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: ${{ github.event.deployment.environment }}
     strategy:
       matrix:
         node-version: [14.x]
