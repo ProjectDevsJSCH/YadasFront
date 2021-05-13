@@ -8,11 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/develop' }}
     environment: 
+      if: ${{ github.ref == 'refs/heads/develop' }}
       name: develop
-    if: ${{ github.ref != 'refs/heads/develop' }}
-    environment: 
+      if: ${{ github.ref != 'refs/heads/develop' }}
       name: review
     strategy:
       matrix:
