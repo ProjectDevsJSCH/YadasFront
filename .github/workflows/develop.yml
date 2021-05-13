@@ -11,6 +11,7 @@ jobs:
     if: ${{ github.ref == 'refs/heads/develop' }}
     environment: 
       name: develop
+    if: ${{ github.ref != 'refs/heads/develop' }}
     environment: 
       name: review
     strategy:
