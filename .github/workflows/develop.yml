@@ -3,17 +3,20 @@ name: BEANSTALK_DEPLOY_DEVELOP
 on: 
   push:
       branches:
-      - develop
+      - 
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/develop' }}
     environment: 
       name: develop
+    environment: 
+      name: review
     strategy:
       matrix:
         node-version: [14.x]
         
     steps:
     - name: Checkout source code
-      run: echo ${{ github.ref }}
+      run: echo "success"
