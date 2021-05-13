@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  build:
+  build-develop:
     runs-on: ubuntu-latest
     environment: 
       name: develop
@@ -70,7 +70,7 @@ jobs:
     - name: Deployed successfully!
       run: echo App deployed to ELB
 
-  build:
+  build-review:
     runs-on: ubuntu-latest
     environment: 
       name: review
