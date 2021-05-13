@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: 
-      name: ${{ github.event.inputs.env_to_promote_to }}
+      name: ${{ github.event.inputs.envName }}
     strategy:
       matrix:
         node-version: [14.x]
