@@ -3,7 +3,7 @@ name: BEANSTALK_DEPLOY_DEVELOP
 on: 
   push:
       branches:
-      - 
+      - '**'
 
 jobs:
   build:
