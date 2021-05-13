@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: 
-      name: ${{ github.event.deployment.environment }}
+      name: review
     strategy:
       matrix:
         node-version: [14.x]
