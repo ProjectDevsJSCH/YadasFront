@@ -17,4 +17,5 @@ app.use(
 app.use(express.static(innerPath));
 
 app.listen(port);
+console.log(process.env.VUE_APP_BASE_URL);
 console.log(`server started ${port}`);
